@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 // Define your email sending route
 app.post('/send-email', (req, res) => {
-  const { subject, subject, message } = req.body;
+  const { subject, toEmail, message } = req.body;
 
   // Create a transporter object using your SMTP settings
   const transporter = nodemailer.createTransport({
